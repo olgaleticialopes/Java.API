@@ -1,67 +1,67 @@
- <div align=center>
+<div align=center>
    
-   # 🌺 Java API 
+ # 🌺 Java API
 
-RESTful API do bootcamp BackEnd JAVA, da DIO. construída em Java 17 com Spring Boot 3.
+RESTful API from DIO's BackEnd JAVA bootcamp. built in Java 17 with Spring Boot 3.
 
 </div>
 
-## Principais Tecnologias
- - **Java 17**: Utilizaremos a versão LTS mais recente do Java para tirar vantagem das últimas inovações que essa linguagem robusta e amplamente utilizada oferece;
- - **Spring Boot 3**: Trabalharemos com a mais nova versão do Spring Boot, que maximiza a produtividade do desenvolvedor por meio de sua poderosa premissa de autoconfiguração;
- - **Spring Data JPA**: Exploraremos como essa ferramenta pode simplificar nossa camada de acesso aos dados, facilitando a integração com bancos de dados SQL;
- - **OpenAPI (Swagger)**: Vamos criar uma documentação de API eficaz e fácil de entender usando a OpenAPI (Swagger), perfeitamente alinhada com a alta produtividade que o Spring Boot oferece;
- - **Railway**: facilita o deploy e monitoramento de nossas soluções na nuvem, além de oferecer diversos bancos de dados como serviço e pipelines de CI/CD.
+## Main Technologies
+  - **Java 17**: We will use the latest LTS version of Java to take advantage of the latest innovations that this robust and widely used language offers;
+  - **Spring Boot 3**: We will work with the newest version of Spring Boot, which maximizes developer productivity through its powerful self-configuration premise;
+  - **Spring Data JPA**: We will explore how this tool can simplify our data access layer, facilitating integration with SQL databases;
+  - **OpenAPI (Swagger)**: We will create effective and easy-to-understand API documentation using OpenAPI (Swagger), perfectly aligned with the high productivity that Spring Boot offers;
+  - **Railway**: facilitates the deployment and monitoring of our solutions in the cloud, in addition to offering several databases as a service and CI/CD pipelines.
 
 ## Preview Figma
 - [FIGMA](https://www.figma.com/file/0ZsjwjsYlYd3timxqMWlbj/SANTANDER---Projeto-Web%2FMobile?type=design&node-id=1421%3A432&mode=design&t=6dPQuerScEQH0zAn-1)
 
-O Figma foi utilizado para a abstração do domínio desta API, sendo útil na análise e projeto da solução.
+Figma was used to abstract the domain of this API, being useful in the analysis and design of the solution.
 
-## Diagrama de Classes (Domínio da API)
+## Class Diagram (API Domain)
 
 ```mermaid
 classDiagram
-  class User {
-    -String name
-    -Account account
-    -Feature[] features
-    -Card card
-    -News[] news
-  }
+   class User {
+     -String name
+     -Account account
+     -Feature[] features
+     -Card card
+     -News[] news
+   }
 
-  class Account {
-    -String number
-    -String agency
-    -Number balance
-    -Number limit
-  }
+   class Account {
+     -String number
+     -String agency
+     -Number balance
+     -Number limit
+   }
 
-  class Feature {
-    -String icon
-    -String description
-  }
+   classFeature {
+     -String icon
+     -String description
+   }
 
-  class Card {
-    -String number
-    -Number limit
-  }
+   class Card {
+     -String number
+     -Number limit
+   }
 
-  class News {
-    -String icon
-    -String description
-  }
+   class News {
+     -String icon
+     -String description
+   }
 
-  User "1" *-- "1" Account
-  User "1" *-- "N" Feature
-  User "1" *-- "1" Card
-  User "1" *-- "N" News
+   User "1" *-- "1" Account
+   User "1" *-- "N" Feature
+   User "1" *-- "1" Card
+   User "1" *-- "N" News
 ```
 
-## Documentação da API (Swagger)
+## API Documentation (Swagger)
 
 ### [https://sdw-2023-prd.up.railway.app/swagger-ui.html](https://sdw-2023-prd.up.railway.app/swagger-ui.html)
 
-Esta API ficará disponível no Railway por um período de tempo limitado, mas este é um código-fonte aberto. Portanto, sintam-se à vontade para cloná-lo, modificá-lo (já que é um bom projeto base para novos projetos) e executar localmente ou onde achar mais interessante! Só não esquece de marcar a gente quando divulgar a sua solução 🥰
+This API will be available on Railway for a limited period of time, but this is open source. Therefore, feel free to clone it, modify it (as it is a good base project for new projects) and run it locally or wherever you find most interesting! Just don’t forget to tag us when you share your solution 🥰
 
 </div>
